@@ -28,3 +28,11 @@
   
 <p>Desarrollar una aplicación web dirigida a cualquier persona, en donde se pueda parametrizar los gastos que acarree y así llevar un control cualitativo y cuantitativo de sus finanzas, Ademas de generar una serie de reportes y gráficos que le ayude al usuario ver el estado de sus gastos.</p>
 
+### Observaciones Entregable Uno.
+- Más orden al momento de presentar la idea.
+- No se implementa diagrama para presentar la idea.
+- Se valora el haber actualizado el tablero de actividades a nivel del FrontEnd, no se había realizado el día de la presentación.
+- Recuerden que esta nota aplica en todos sus efectos a los que asistieron a la presentación, quién no haya estado presente tiene 0.5 menos a la nota acá proporcionada.
+
+#### Nota: 3,5
+
