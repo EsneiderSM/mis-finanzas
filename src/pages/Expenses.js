@@ -1,5 +1,8 @@
-import React from 'react'
-import axios from 'axios'
+import React from 'react';
+import axios from 'axios';
+
+import MenuComponent from '../components/MenuComponent';
+import ListExpensesComponent from '../components/ListExpensesComponent';
 
 class Expenses extends React.Component {
     state = {
@@ -18,7 +21,13 @@ class Expenses extends React.Component {
     }
 
     render() {
-        return <h1>Gastos</h1>
+        return (
+            <React.Fragment>
+                <MenuComponent />
+                <h2>Listado de gastos</h2>
+                <ListExpensesComponent expenses = {this.state.expenses}/>
+            </React.Fragment>
+        )
     }
 }
 export default Expenses;
