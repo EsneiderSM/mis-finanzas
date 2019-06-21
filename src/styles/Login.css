@@ -1,0 +1,28 @@
+
+.login{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .login h1{
+    text-align: center;
+  }
+  
+  .login__form{
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  
+  .login__form input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .login{
+        max-width: 90%;
+    }
+  }
