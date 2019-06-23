@@ -1,23 +1,23 @@
 import React from 'react'
 
+import '../styles/ListExpenses.css';
 class ListExpensesComponent extends React.Component {
     render() {
         return (
-            <ul className="list-unstyled">
+            <div className="expenses">
                 {this.props.expenses.map(expenses => {
-                    return(
-                        <li key={expenses.id} className='Profile__section-name-list'>
-                            <div>
-                                {expenses.name}
-                                <br/>
-                                {expenses.created}
-                                <br/>
-                                {expenses.id}
-                            </div>
-                        </li>
+                    return (
+                        <div key={expenses.id} className="expenses__item">
+
+                            <div>{expenses.name}</div>
+                            <div>{expenses.created}</div>
+                            <div>{expenses.id}</div>
+
+
+                        </div>
                     )
                 })}
-            </ul>
+            </div>
         )
     }
 }

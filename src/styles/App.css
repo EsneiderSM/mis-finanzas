@@ -10,7 +10,8 @@ body{
   box-sizing: border-box;
 }
 
-h1{
+h1,
+h2{
   font-weight: 400;
   color: #fff;
   width: 100%;
@@ -18,6 +19,10 @@ h1{
 
 input{
   outline: none;
+}
+
+.content-wrapper{
+  padding: 15px;
 }
 
 .button{

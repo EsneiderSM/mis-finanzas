@@ -1,10 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 
-import MenuComponent from '../components/MenuComponent';
+import HeaderComponent from '../components/HeaderComponent';
 import ListExpensesComponent from '../components/ListExpensesComponent';
 
+import '../styles/Expenses.css'
+
 class Expenses extends React.Component {
+    
     state = {
         expenses: []
     }
@@ -13,7 +16,6 @@ class Expenses extends React.Component {
         axios.get('https://rickandmortyapi.com/api/character/')
             .then(res => {
 
-                debugger
                 this.setState({
                     expenses: res.data.results
                 })
@@ -22,11 +24,15 @@ class Expenses extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
-                <MenuComponent />
-                <h2>Listado de gastos</h2>
-                <ListExpensesComponent expenses = {this.state.expenses}/>
-            </React.Fragment>
+            <div>
+                <HeaderComponent />
+                <div className="content-wrapper">
+                    <div className="list-expenses">
+                        <h2>Tus gastos</h2>
+                        <ListExpensesComponent expenses={this.state.expenses} />
+                    </div>
+                </div>
+            </div>
         )
     }
 }

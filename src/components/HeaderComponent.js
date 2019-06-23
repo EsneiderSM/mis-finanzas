@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom';
 
 import '../styles/Header.css';
 
-class MenuComponent extends Component {
+class HeaderComponent extends Component {
     render() {
         return (
             <div className="header">
                 <div className="header__logo">
-                    logo
+                    POCKET
                 </div>
                 <div className="header__menu">
                     <ul>
                         <li>
-                            <Link to="/home">Home</Link>
+                            <Link className="button-outline" to="/home">Home</Link>
                         </li>
                         <li>
-                            <Link to="/expenses">Gastos</Link>
+                            <Link className="button-outline" to="/expenses">Gastos</Link>
                         </li>
                         <li>
-                            <Link to="/expenses">Salir</Link>
+                            <Link className="button-outline" to="/">Salir</Link>
                         </li>
                     </ul>
                 </div>
@@ -29,4 +29,4 @@ class MenuComponent extends Component {
     }
 }
 
-export default MenuComponent;
+export default HeaderComponent;
