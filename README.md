@@ -36,3 +36,7 @@
 
 #### Nota: 3,5
 
+
+## Diagrama de procesos
+
+.. image::/DiagramaProceso.JPG
