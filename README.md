@@ -39,4 +39,4 @@
 
 ## Diagrama de procesos
 
- ![alt text](https://raw.githubusercontent.com/EsneiderSM/mis-finanzas/master/path/to/DiagramaProceso.jpg) 
+ ![alt text](https://raw.githubusercontent.com/EsneiderSM/mis-finanzas/blob/master/to/DiagramaProceso.JPG) 
