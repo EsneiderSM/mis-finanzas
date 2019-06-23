@@ -4,7 +4,6 @@
 
 * Esneider Serna Marulanda
 * Juan Pablo Becerra Restrepo
-* Santiago Bohorquez Alzate
 * Sebastián García Durango
 
 
