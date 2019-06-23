@@ -11,18 +11,34 @@ body{
 }
 
 h1,
-h2{
+h2,
+h3{
   font-weight: 400;
   color: #fff;
   width: 100%;
+}
+
+h3{
+  color: #026b51;
 }
 
 input{
   outline: none;
 }
 
-.content-wrapper{
+.wrapper{
   padding: 15px;
+}
+
+.wrapper__content{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.white-content{
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2em;
 }
 
 .button{
@@ -59,4 +75,15 @@ input{
 
 ::-ms-input-placeholder { 
   color: #fff;
+}
+
+.title-section{
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .wrapper__content{
+      max-width: 90%;
+  }
 }

@@ -1,0 +1,12 @@
+.balance{
+    text-align: center;
+}
+
+.balance h3{
+    color: #5A5A5A;  
+}
+
+.balance__balance-number{
+    font-size: 3em; 
+    color: #026b51;
+}

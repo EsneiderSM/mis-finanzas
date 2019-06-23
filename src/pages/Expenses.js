@@ -26,9 +26,9 @@ class Expenses extends React.Component {
         return (
             <div>
                 <HeaderComponent />
-                <div className="content-wrapper">
-                    <div className="list-expenses">
-                        <h2>Tus gastos</h2>
+                <div className="wrapper__content">
+                    <h2 className="title-section">Tus gastos</h2> 
+                    <div className="white-content">
                         <ListExpensesComponent expenses={this.state.expenses} />
                     </div>
                 </div>

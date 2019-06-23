@@ -1,5 +1,6 @@
 import React from 'react'
 
+import '../styles/Home.css'
 import HeaderComponent from '../components/HeaderComponent'
 
 class Home extends React.Component {
@@ -7,7 +8,19 @@ class Home extends React.Component {
         return (
             <div>
                 <HeaderComponent />
-                <h1>Home</h1>
+                <div className="wrapper__content">
+                    <h2 className="title-section">Tu saldo</h2> 
+                    <div className="white-content balance">
+                        <div>
+                            <h3>Disponible</h3>
+                            <span className="balance__balance-number">$450.000</span>
+                        </div>
+                        <div>
+                            <h3>Total gastos mes</h3>
+                            <span className="balance__balance-number">$655.000</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
