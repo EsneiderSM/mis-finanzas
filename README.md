@@ -19,7 +19,7 @@
 
 ## Modelo Entidad Relación
 
-<p> A continuación podemos observar el modelo entidad realción de el aplicativo</p>
+<p> A continuación podemos observar el modelo entidad relación de el aplicativo</p>
 
 ![alt text](https://github.com/EsneiderSM/mis-finanzas/blob/branch-dev/src/images/ModeloER.jpg)
 
