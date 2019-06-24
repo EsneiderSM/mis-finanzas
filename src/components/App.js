@@ -6,6 +6,7 @@ import Login from '../pages/Login';
 import Home from '../pages/Home';
 import Register from '../pages/Register';
 import Expenses from '../pages/Expenses';
+import NewExpense from '../pages/NewExpense';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/expenses" component={Expenses} />
+        <Route exact path="/new-expense" component={NewExpense} />
         <Route exact path="/" render={() => (<Redirect to="/login" />)} />
       </Switch>
     </BrowserRouter>

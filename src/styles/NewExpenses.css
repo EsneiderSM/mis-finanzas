@@ -1,0 +1,7 @@
+.new-expense-form input,
+.new-expense-form select{
+    border: none;
+    color: #5A5A5A;
+    border-bottom: 1px solid #EBEBEB;
+    font-size: 1.5rem;
+}

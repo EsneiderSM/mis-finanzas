@@ -4,25 +4,38 @@
     margin: 0 auto;
   }
   
-  .login h1{
-    text-align: center;
-  }
-  
-  .login__form{
-    max-width: 75%;
-    margin: 0 auto;
-  }
-  
-  .login__form input{
-    border: none;
-    background-color: transparent;
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    font-size: 1.5rem;
-  }
+.login h1{
+  text-align: center;
+}
 
-  @media (max-width: 600px) {
-    .login{
-        max-width: 90%;
-    }
+.login__form{
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.login__form input{
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.login__form ::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.login__form :-ms-input-placeholder { 
+  color: #fff;
+}
+
+.login__form ::-ms-input-placeholder { 
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .login{
+      max-width: 90%;
   }
+}

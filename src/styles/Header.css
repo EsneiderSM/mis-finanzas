@@ -24,16 +24,3 @@
     margin: 0 10px;
 }
 
-.header__menu ul li a{
-    display: block;
-    text-decoration: none;
-    color: #026b51;
-    border: 1px solid #00D3A0;
-    border-radius: 35px;
-    padding: 7px 30px;
-}
-
-.header__menu ul li a:hover{
-    background-color: #00D3A0;
-    color: #fff;
-}

@@ -31,7 +31,7 @@ input{
 }
 
 .wrapper__content{
-  width: 70%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -55,26 +55,39 @@ input{
   color: #00D3A0;
 }
 
+.button-outline{
+  display: block;
+  text-decoration: none;
+  color: #026b51;
+  border: 1px solid #00D3A0;
+  border-radius: 35px;
+  padding: 7px 30px;
+}
+
+.button-outline-gray{
+  display: block;
+  text-decoration: none;
+  color: #5A5A5A;
+  border: 1px solid #5A5A5A;
+  border-radius: 35px;
+  padding: 7px 30px;
+}
+
+.button-outline:hover,
+.button-outline-gray:hover{
+  background-color: #00D3A0;
+  border-color: #00D3A0;
+  color: #fff;
+}
+
 .control-form {
   margin: 2em 0;
 }
 
 .control-form input,
-.control-form button{
+.control-form button,
+.control-form select{
   width: 100%;
-}
-
-::placeholder {
-  color: #fff;
-  opacity: 1;
-}
-
-:-ms-input-placeholder { 
-  color: #fff;
-}
-
-::-ms-input-placeholder { 
-  color: #fff;
 }
 
 .title-section{
@@ -85,5 +98,9 @@ input{
 @media (max-width: 600px) {
   .wrapper__content{
       max-width: 90%;
+  }
+
+  .white-content{
+    padding: 1em;
   }
 }

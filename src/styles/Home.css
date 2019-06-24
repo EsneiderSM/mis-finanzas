@@ -10,3 +10,13 @@
     font-size: 3em; 
     color: #026b51;
 }
+
+.btns-add{
+    display: flex;
+    justify-content: center;
+    margin: 3em 0;
+}
+
+.btns-add a{
+    margin:0 1em;
+}
