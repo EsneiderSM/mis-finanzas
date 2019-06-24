@@ -11,6 +11,20 @@
 
 <p>En esta rama se desarrollara el prototipo funcional de el aplicativo.</p>
 
+## Diagrama de clases
+
+<p> En la imagen se puede observar el diagrama de clases de el aplicativo</p>
+
+![alt text](https://github.com/EsneiderSM/mis-finanzas/blob/branch-dev/src/images/DiagramaDeClases.jpg) 
+
+## Modelo Entidad Relación
+
+<p> A continuación podemos observar el modelo entidad realción de el aplicativo</p>
+
+![alt text](https://github.com/EsneiderSM/mis-finanzas/blob/branch-dev/src/images/ModeloER.jpg)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
