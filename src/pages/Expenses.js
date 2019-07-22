@@ -7,17 +7,16 @@ import ListExpensesComponent from '../components/ListExpensesComponent';
 import '../styles/Expenses.css'
 
 class Expenses extends React.Component {
-    
+
     state = {
         expenses: []
     }
 
     componentDidMount() {
-        axios.get('https://rickandmortyapi.com/api/character/')
+        axios.get('http://localhost:5700/api/expenses')
             .then(res => {
-
                 this.setState({
-                    expenses: res.data.results
+                    expenses: res.data.data
                 })
             }).catch(err => console.log(err))
     }
@@ -27,7 +26,7 @@ class Expenses extends React.Component {
             <div>
                 <HeaderComponent />
                 <div className="wrapper__content">
-                    <h2 className="title-section">Tus gastos</h2> 
+                    <h2 className="title-section">Tus gastos</h2>
                     <div className="white-content">
                         <ListExpensesComponent expenses={this.state.expenses} />
                     </div>

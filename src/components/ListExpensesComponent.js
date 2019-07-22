@@ -9,10 +9,9 @@ class ListExpensesComponent extends React.Component {
                     return (
                         <div key={expenses.id} className="expenses__item">
 
-                            <div>{expenses.name}</div>
-                            <div>{expenses.created}</div>
-                            <div>{expenses.id}</div>
-
+                            <div>{expenses.date}</div>
+                            <div>{expenses.type}</div>
+                            <div>{expenses.value}</div>
 
                         </div>
                     )
