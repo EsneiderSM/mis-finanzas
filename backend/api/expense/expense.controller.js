@@ -1,23 +1,22 @@
-const Category = require('./category.model');
+const Expense = require('./Expense.model');
 
-
-// Gets a list of category
+// Gets a list of Expense
 function index(req, res) {
-    return Category.find().exec()
+    return Expense.find().exec()
       .then(respondWithResult(res))
       .catch(handleError(res));
   }
   
-  // Create category
+  // Create Expense
   function create(req, res) {
-    return Category.create(req.body)
+    return Expense.create(req.body)
       .then(respondWithResult(res, 201))
       .catch(handleError(res));
   }
   
-  // Gets a single category from the DB
+  // Gets a single Expense from the DB
   function show(req, res) {
-    return Category.findById(req.params.id).exec()
+    return Expense.findById(req.params.id).exec()
       .then(handleEntityNotFound(res))
       .then(respondWithResult(res))
       .catch(handleError(res));
@@ -25,12 +24,11 @@ function index(req, res) {
 
   function respondWithResult(res, code) {
     const statusCode = code || 200;
-
     return (entity) => {
       if (entity) {
         let response = {
-          status : statusCode,
-          data : entity
+            status : statusCode,
+            data : entity
         };
         res.status(statusCode).json(response);
       }

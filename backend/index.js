@@ -1,29 +1,14 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const http = require('http');
 const mongoose = require('mongoose');
-const cors = require('cors');
+
+// New line
+const expressConfig = require('./config/express');
 const routeConfig = require('./routes');
-
-
-//app
-const app = express();
-routeConfig(app);
-
-//middlewares
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json())
-
-//routes
-const profileApiRouter = require('./router/api/ProfileApi');
-const expenseApiRouter = require('./router/api/ExpenseApi');
 const config = require('./config/environment');
-
-
 
 // Connect to MongoDB
 mongoose.connect(config.mongo.uri, { useNewUrlParser: true });
-debugger
 mongoose.connection.on('error', (err) => {
   console.error('Error', 'MongoDB connection error', {
     data: err,
@@ -32,6 +17,23 @@ mongoose.connection.on('error', (err) => {
   process.exit(-1);
 });
 
-const server = app.listen(5700, () => {
-    console.log(`Listening http://localhost:${server.address().port}`)
-})
+// Setup server
+const app = express();
+const server = http.createServer(app);
+
+// New line
+expressConfig(app);
+routeConfig(app);
+
+
+// Start server
+function startServer() {
+  app.shoppingCartBK = server.listen(config.port, config.ip, () => {
+    console.log(`Express server listening on ${config.port}, in ${app.get('env')} mode`);
+  });
+}
+
+setImmediate(startServer);
+
+// Expose app
+module.exports = app;
