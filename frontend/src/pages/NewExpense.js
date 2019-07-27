@@ -11,9 +11,8 @@ class NewExpenses extends React.Component {
         super(props);
 
         this.state = {
-            value: '',
-            type: '',
-            date: '',
+            value: 0,
+            category: '',
             description: ''
         };
     }
@@ -23,19 +22,25 @@ class NewExpenses extends React.Component {
     }
 
     submitHandler = e => {
+
         e.preventDefault();
-        console.log(this.state);
-        axios.post('http://localhost:5700/api/expenses', this.setState)
+
+        let headers = {
+            'Content-Type': 'application/json'
+        }
+
+        let data = JSON.parse(JSON.stringify(this.state));
+        axios.post('http://localhost:8080/api/expense', data, { headers: headers })
             .then(resp => {
-                console.log(resp);
+                this.props.history.push("/home");
             })
             .catch(error => {
-                console.log(error);
+                console.error(error);
             })
     }
 
     render() {
-        const { value, type } = this.state;
+        const { value, category } = this.state;
         return (
             <div>
                 <HeaderComponent />
@@ -47,7 +52,7 @@ class NewExpenses extends React.Component {
                                 <input name="value" type="text" placeholder="Valor" value={value} onChange={this.changeHandler} />
                             </div>
                             <div className="control-form">
-                                <select name="type" select={type} onChange={this.changeHandler}>
+                                <select name="category" select={category} onChange={this.changeHandler}>
                                     <option value="">Categoría</option>
                                     <option value="Salida">Salida</option>
                                     <option value="Comida">Comida</option>
@@ -56,13 +61,10 @@ class NewExpenses extends React.Component {
                                 </select>
                             </div>
                             <div className="btns-add">
-                                <Link className="button-outline button-outline-gray" to="/home">- Cancelar</Link>
-                                <Link className="button-outline" to="/home">+ Agregar</Link>
+                                <Link className="button button-outline button-outline-gray" to="/home">- Cancelar</Link>
 
-                                <button type="submit"
-                                    id="blog_post_submit"
-                                    className="btn-default btn">
-                                    Submit
+                                <button className="button button-outline" type="submit">
+                                    + Agregar
                                 </button>
                             </div>
                         </form>

@@ -15,7 +15,6 @@ class Expenses extends React.Component {
     componentDidMount() {
         axios.get('http://localhost:8080/api/expense')
             .then(res => {
-debugger
                 this.setState({
                     expenses: res.data.data
                 })
